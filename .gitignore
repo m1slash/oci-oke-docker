@@ -1,0 +1,12 @@
+### Git ###
+*.orig
+
+### VIM ###
+*~
+*.swp
+*.swo
+
+### General ###
+*.log
+*.lock*
+*.DS_Store
