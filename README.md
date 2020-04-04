@@ -24,4 +24,4 @@ $ docker run \
 	--entrypoint bash mislas87/oci-oke-cli:0.1.0
 ```
 
-I use [this prject](https://github.com/jpoon/oci-cli-docker) as base.
+I use [this project](https://github.com/jpoon/oci-cli-docker) as base.
