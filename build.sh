@@ -1,7 +1,7 @@
 #!/bin/sh
 
 IMAGE_NAME=oci-oke-cli
-IMAGE_TAG=0.1.0
+IMAGE_TAG=0.2.0
 
 REPOSITORY_ID=$IMAGE_NAME:$IMAGE_TAG
 

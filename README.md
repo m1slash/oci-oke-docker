@@ -11,7 +11,7 @@ $ docker run \
 	-it --name oci-oke-cli \
 	-v ${HOME}/.oci:/root/.oci \
 	-v ${HOME}/.kube:/root/.kube \
-	mislas87/oci-oke-cli:0.1.0 -h
+	mislas87/oci-oke-cli:0.2.0 -h
 ```
 
 or, override the entrypoint and run Bash in the container
@@ -21,7 +21,7 @@ $ docker run \
 	--rm -it --name oci-oke-cli \
 	-v ${HOME}/.oci:/root/.oci \
 	-v ${HOME}/.kube:/root/.kube \
-	--entrypoint bash mislas87/oci-oke-cli:0.1.0
+	--entrypoint bash mislas87/oci-oke-cli:0.2.0
 ```
 
 I use [this project](https://github.com/jpoon/oci-cli-docker) as base.
