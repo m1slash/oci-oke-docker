@@ -19,7 +19,8 @@ LABEL maintainer="mislas87@gmail.com" \
 WORKDIR /oci-cli
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends unzip
+    && apt-get install -y --no-install-recommends unzip \
+    && apt-get install -y bash-completion
 
 RUN set -ex \
     && wget -qO- -O oci-cli.zip "https://github.com/oracle/oci-cli/releases/download/v${CLI_VERSION}/oci-cli-${CLI_VERSION}.zip" \
@@ -34,5 +35,9 @@ RUN set -ex \
     && chmod +x kubectl \
     && mv kubectl /usr/local/bin/kubectl \
     && mkdir -p $HOME/.kube
+
+RUN echo 'source /usr/share/bash-completion/bash_completion' >>~/.bashrc \
+    && echo 'source <(kubectl completion bash)' >>~/.bashrc \
+    && echo 'export KUBECONFIG=$HOME/.kube/config' >>~/.bashrc
 
 ENTRYPOINT ["/usr/local/bin/oci"]
